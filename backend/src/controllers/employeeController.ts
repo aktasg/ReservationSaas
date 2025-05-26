@@ -4,6 +4,9 @@ import { createError } from '../utils/error';
 
 // Create new employee
 export const createEmployee = async (req: Request, res: Response) => {
+  if (!req.user) {
+    return res.status(401).json(createError('User not authenticated'));
+  }
   try {
     const employee = new Employee({
       ...req.body,
@@ -18,6 +21,9 @@ export const createEmployee = async (req: Request, res: Response) => {
 
 // Get all employees for a business
 export const getEmployees = async (req: Request, res: Response) => {
+  if (!req.user) {
+    return res.status(401).json(createError('User not authenticated'));
+  }
   try {
     const employees = await Employee.find({ businessId: req.user.businessId });
     res.status(200).json({ success: true, data: employees });
@@ -28,6 +34,9 @@ export const getEmployees = async (req: Request, res: Response) => {
 
 // Get employee by ID
 export const getEmployeeById = async (req: Request, res: Response) => {
+  if (!req.user) {
+    return res.status(401).json(createError('User not authenticated'));
+  }
   try {
     const employee = await Employee.findOne({
       _id: req.params.id,
@@ -46,6 +55,9 @@ export const getEmployeeById = async (req: Request, res: Response) => {
 
 // Update employee
 export const updateEmployee = async (req: Request, res: Response) => {
+  if (!req.user) {
+    return res.status(401).json(createError('User not authenticated'));
+  }
   try {
     const employee = await Employee.findOneAndUpdate(
       { _id: req.params.id, businessId: req.user.businessId },
@@ -65,6 +77,9 @@ export const updateEmployee = async (req: Request, res: Response) => {
 
 // Delete employee
 export const deleteEmployee = async (req: Request, res: Response) => {
+  if (!req.user) {
+    return res.status(401).json(createError('User not authenticated'));
+  }
   try {
     const employee = await Employee.findOneAndDelete({
       _id: req.params.id,
@@ -83,6 +98,9 @@ export const deleteEmployee = async (req: Request, res: Response) => {
 
 // Update employee working hours
 export const updateWorkingHours = async (req: Request, res: Response) => {
+  if (!req.user) {
+    return res.status(401).json(createError('User not authenticated'));
+  }
   try {
     const { workingHours } = req.body;
     const employee = await Employee.findOneAndUpdate(
@@ -103,6 +121,9 @@ export const updateWorkingHours = async (req: Request, res: Response) => {
 
 // Update employee services
 export const updateServices = async (req: Request, res: Response) => {
+  if (!req.user) {
+    return res.status(401).json(createError('User not authenticated'));
+  }
   try {
     const { services } = req.body;
     const employee = await Employee.findOneAndUpdate(
@@ -123,6 +144,9 @@ export const updateServices = async (req: Request, res: Response) => {
 
 // Update employee status
 export const updateStatus = async (req: Request, res: Response) => {
+  if (!req.user) {
+    return res.status(401).json(createError('User not authenticated'));
+  }
   try {
     const { status } = req.body;
     const employee = await Employee.findOneAndUpdate(

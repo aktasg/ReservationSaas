@@ -4,6 +4,9 @@ import { createError } from '../utils/error';
 
 // Create new appointment
 export const createAppointment = async (req: Request, res: Response) => {
+  if (!req.user) {
+    return res.status(401).json(createError('User not authenticated'));
+  }
   try {
     const appointment = new Appointment({
       ...req.body,
@@ -18,6 +21,9 @@ export const createAppointment = async (req: Request, res: Response) => {
 
 // Get all appointments for a business
 export const getAppointments = async (req: Request, res: Response) => {
+  if (!req.user) {
+    return res.status(401).json(createError('User not authenticated'));
+  }
   try {
     const { startDate, endDate, employeeId, status } = req.query;
     const query: any = { businessId: req.user.businessId };
@@ -50,6 +56,9 @@ export const getAppointments = async (req: Request, res: Response) => {
 
 // Get appointment by ID
 export const getAppointmentById = async (req: Request, res: Response) => {
+  if (!req.user) {
+    return res.status(401).json(createError('User not authenticated'));
+  }
   try {
     const appointment = await Appointment.findOne({
       _id: req.params.id,
@@ -70,6 +79,9 @@ export const getAppointmentById = async (req: Request, res: Response) => {
 
 // Update appointment
 export const updateAppointment = async (req: Request, res: Response) => {
+  if (!req.user) {
+    return res.status(401).json(createError('User not authenticated'));
+  }
   try {
     const appointment = await Appointment.findOneAndUpdate(
       { _id: req.params.id, businessId: req.user.businessId },
@@ -91,6 +103,9 @@ export const updateAppointment = async (req: Request, res: Response) => {
 
 // Delete appointment
 export const deleteAppointment = async (req: Request, res: Response) => {
+  if (!req.user) {
+    return res.status(401).json(createError('User not authenticated'));
+  }
   try {
     const appointment = await Appointment.findOneAndDelete({
       _id: req.params.id,
@@ -109,6 +124,9 @@ export const deleteAppointment = async (req: Request, res: Response) => {
 
 // Update appointment status
 export const updateStatus = async (req: Request, res: Response) => {
+  if (!req.user) {
+    return res.status(401).json(createError('User not authenticated'));
+  }
   try {
     const { status } = req.body;
     const appointment = await Appointment.findOneAndUpdate(
@@ -131,6 +149,9 @@ export const updateStatus = async (req: Request, res: Response) => {
 
 // Get appointments by date range
 export const getAppointmentsByDateRange = async (req: Request, res: Response) => {
+  if (!req.user) {
+    return res.status(401).json(createError('User not authenticated'));
+  }
   try {
     const { startDate, endDate } = req.query;
     const appointments = await Appointment.find({
@@ -152,6 +173,9 @@ export const getAppointmentsByDateRange = async (req: Request, res: Response) =>
 
 // Get appointments by employee
 export const getAppointmentsByEmployee = async (req: Request, res: Response) => {
+  if (!req.user) {
+    return res.status(401).json(createError('User not authenticated'));
+  }
   try {
     const { employeeId, startDate, endDate } = req.query;
     const query: any = {
