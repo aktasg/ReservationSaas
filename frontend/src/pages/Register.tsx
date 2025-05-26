@@ -1,195 +1,138 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Box,
+  Container,
   Paper,
   Typography,
   TextField,
   Button,
+  Grid,
   Link,
-  Alert,
 } from '@mui/material';
-import { Link as RouterLink, useNavigate } from 'react-router-dom';
-import { useAuth } from '../contexts/AuthContext';
+import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 const Register: React.FC = () => {
-  const { register } = useAuth();
+  const { t } = useTranslation();
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-  });
-  const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [validationErrors, setValidationErrors] = useState<Record<string, string>>({});
 
-  const validateForm = (): boolean => {
-    const errors: Record<string, string> = {};
-    let isValid = true;
-
-    if (!formData.name.trim()) {
-      errors.name = 'İsim alanı zorunludur';
-      isValid = false;
-    }
-
-    if (!formData.email.trim()) {
-      errors.email = 'E-posta alanı zorunludur';
-      isValid = false;
-    } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
-      errors.email = 'Geçerli bir e-posta adresi giriniz';
-      isValid = false;
-    }
-
-    if (!formData.password) {
-      errors.password = 'Şifre alanı zorunludur';
-      isValid = false;
-    } else if (formData.password.length < 6) {
-      errors.password = 'Şifre en az 6 karakter olmalıdır';
-      isValid = false;
-    }
-
-    if (formData.password !== formData.confirmPassword) {
-      errors.confirmPassword = 'Şifreler eşleşmiyor';
-      isValid = false;
-    }
-
-    setValidationErrors(errors);
-    return isValid;
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-    // Clear validation error when user starts typing
-    if (validationErrors[name]) {
-      setValidationErrors(prev => ({
-        ...prev,
-        [name]: '',
-      }));
-    }
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError('');
-
-    if (!validateForm()) {
-      return;
-    }
-
-    setLoading(true);
-
-    try {
-      await register(formData.email, formData.password, formData.name);
-      navigate('/'); // Başarılı kayıt sonrası ana sayfaya yönlendir
-    } catch (err: any) {
-      const errorMessage = err.message || 'Kayıt olurken bir hata oluştu';
-      setError(errorMessage);
-    } finally {
-      setLoading(false);
-    }
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    // Kayıt işlemleri burada yapılacak
   };
 
   return (
-    <Box
-      sx={{
-        height: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        bgcolor: 'background.default',
-      }}
-    >
-      <Paper
-        elevation={3}
-        sx={{
-          p: 4,
-          width: '100%',
-          maxWidth: 400,
-        }}
-      >
-        <Typography variant="h5" component="h1" gutterBottom align="center">
-          Kayıt Ol
-        </Typography>
-
-        {error && (
-          <Alert severity="error" sx={{ mb: 2 }}>
-            {error}
-          </Alert>
-        )}
-
-        <Box component="form" onSubmit={handleSubmit}>
-          <TextField
-            margin="normal"
-            required
-            fullWidth
-            label="Ad Soyad"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            error={!!validationErrors.name}
-            helperText={validationErrors.name}
-            disabled={loading}
-          />
-          <TextField
-            margin="normal"
-            required
-            fullWidth
-            label="E-posta"
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            error={!!validationErrors.email}
-            helperText={validationErrors.email}
-            disabled={loading}
-          />
-          <TextField
-            margin="normal"
-            required
-            fullWidth
-            label="Şifre"
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            error={!!validationErrors.password}
-            helperText={validationErrors.password}
-            disabled={loading}
-          />
-          <TextField
-            margin="normal"
-            required
-            fullWidth
-            label="Şifre Tekrar"
-            type="password"
-            name="confirmPassword"
-            value={formData.confirmPassword}
-            onChange={handleChange}
-            error={!!validationErrors.confirmPassword}
-            helperText={validationErrors.confirmPassword}
-            disabled={loading}
-          />
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            sx={{ mt: 3, mb: 2 }}
-            disabled={loading}
+    <Box>
+      <Navbar />
+      <Container component="main" maxWidth="xs">
+        <Box
+          sx={{
+            marginTop: 8,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
+          <Paper
+            elevation={3}
+            sx={{
+              padding: 4,
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              width: '100%',
+            }}
           >
-            {loading ? 'Kayıt yapılıyor...' : 'Kayıt Ol'}
-          </Button>
-          <Box sx={{ textAlign: 'center' }}>
-            <Link component={RouterLink} to="/login" variant="body2">
-              Zaten hesabınız var mı? Giriş yapın
-            </Link>
-          </Box>
+            <Typography component="h1" variant="h5">
+              {t('auth.register.title')}
+            </Typography>
+            <Box component="form" onSubmit={handleSubmit} sx={{ mt: 3 }}>
+              <Grid container spacing={2}>
+                <Grid item xs={12}>
+                  <TextField
+                    required
+                    fullWidth
+                    id="name"
+                    label={t('auth.register.name')}
+                    name="name"
+                    autoComplete="name"
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    required
+                    fullWidth
+                    id="email"
+                    label={t('auth.register.email')}
+                    name="email"
+                    autoComplete="email"
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    required
+                    fullWidth
+                    name="password"
+                    label={t('auth.register.password')}
+                    type="password"
+                    id="password"
+                    autoComplete="new-password"
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    required
+                    fullWidth
+                    name="confirm_password"
+                    label={t('auth.register.confirm_password')}
+                    type="password"
+                    id="confirm_password"
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    required
+                    fullWidth
+                    name="company"
+                    label={t('auth.register.company')}
+                    id="company"
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    required
+                    fullWidth
+                    name="phone"
+                    label={t('auth.register.phone')}
+                    id="phone"
+                    type="tel"
+                  />
+                </Grid>
+              </Grid>
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2 }}
+              >
+                {t('auth.register.submit')}
+              </Button>
+              <Grid container justifyContent="flex-end">
+                <Grid item>
+                  <Link
+                    href="#"
+                    variant="body2"
+                    onClick={() => navigate('/login')}
+                  >
+                    {t('auth.register.login')}
+                  </Link>
+                </Grid>
+              </Grid>
+            </Box>
+          </Paper>
         </Box>
-      </Paper>
+      </Container>
     </Box>
   );
 };

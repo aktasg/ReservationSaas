@@ -19,6 +19,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Link as RouterLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import type { SelectChangeEvent } from '@mui/material';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const pages = [
   { key: 'features', href: '#features' },
@@ -163,21 +164,7 @@ const Navbar: React.FC = () => {
 
           {/* Language selector */}
           <Box sx={{ minWidth: 120, mr: 2 }}>
-            <FormControl variant="standard" size="small">
-              <InputLabel>{t('navbar.language')}</InputLabel>
-              <Select
-                value={i18n.language || 'tr'}
-                onChange={handleChangeLanguage}
-                label={t('navbar.language')}
-                sx={{ minWidth: 100 }}
-              >
-                {languages.map((lang) => (
-                  <MenuItem key={lang.code} value={lang.code}>
-                    {lang.name}
-                  </MenuItem>
-                ))}
-              </Select>
-            </FormControl>
+            <LanguageSwitcher />
           </Box>
 
           {/* Auth buttons */}

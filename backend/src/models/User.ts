@@ -1,70 +1,66 @@
-import mongoose from 'mongoose';
+import mongoose, { Document, Schema } from 'mongoose';
 import bcrypt from 'bcryptjs';
 
-export interface IUser extends mongoose.Document {
-  name: string;
+export interface IUser extends Document {
+  businessId: mongoose.Types.ObjectId;
   email: string;
   password: string;
-  role: 'super-admin' | 'business-admin' | 'user';
-  businessName?: string;
-  businessAddress?: string;
-  businessPhone?: string;
-  businessEmail?: string;
-  isActive: boolean;
+  role: 'admin' | 'manager' | 'employee';
+  firstName: string;
+  lastName: string;
+  phone?: string;
+  status: 'active' | 'inactive';
+  lastLogin?: Date;
+  comparePassword(candidatePassword: string): Promise<boolean>;
   createdAt: Date;
   updatedAt: Date;
-  comparePassword(candidatePassword: string): Promise<boolean>;
 }
 
-const userSchema = new mongoose.Schema(
+const UserSchema = new Schema<IUser>(
   {
-    name: {
-      type: String,
-      required: [true, 'İsim alanı zorunludur'],
-      trim: true,
+    businessId: {
+      type: Schema.Types.ObjectId,
+      ref: 'Business',
+      required: [true, 'Business ID is required'],
     },
     email: {
       type: String,
-      required: [true, 'E-posta alanı zorunludur'],
+      required: [true, 'Email is required'],
       unique: true,
       trim: true,
       lowercase: true,
-      match: [/^\S+@\S+\.\S+$/, 'Geçerli bir e-posta adresi giriniz'],
     },
     password: {
       type: String,
-      required: [true, 'Şifre alanı zorunludur'],
-      minlength: [6, 'Şifre en az 6 karakter olmalıdır'],
+      required: [true, 'Password is required'],
+      minlength: [6, 'Password must be at least 6 characters long'],
     },
     role: {
       type: String,
-      enum: ['super-admin', 'business-admin', 'user'],
-      default: 'business-admin',
+      enum: ['admin', 'manager', 'employee'],
+      default: 'employee',
     },
-    businessName: {
+    firstName: {
       type: String,
-      required: function() {
-        return this.role === 'business-admin';
-      },
+      required: [true, 'First name is required'],
       trim: true,
     },
-    businessAddress: {
+    lastName: {
+      type: String,
+      required: [true, 'Last name is required'],
+      trim: true,
+    },
+    phone: {
       type: String,
       trim: true,
     },
-    businessPhone: {
+    status: {
       type: String,
-      trim: true,
+      enum: ['active', 'inactive'],
+      default: 'active',
     },
-    businessEmail: {
-      type: String,
-      trim: true,
-      lowercase: true,
-      match: [/^\S+@\S+\.\S+$/, 'Geçerli bir e-posta adresi giriniz'],
-    },
-    isActive: {
-      type: Boolean,
-      default: true,
+    lastLogin: {
+      type: Date,
     },
   },
   {
@@ -72,11 +68,14 @@ const userSchema = new mongoose.Schema(
   }
 );
 
-// Şifreyi hashleme
-userSchema.pre('save', async function (next) {
-  if (!this.isModified('password')) {
-    return next();
-  }
+// Indexes
+UserSchema.index({ businessId: 1 });
+UserSchema.index({ email: 1 }, { unique: true });
+UserSchema.index({ role: 1 });
+
+// Hash password before saving
+UserSchema.pre('save', async function (next) {
+  if (!this.isModified('password')) return next();
 
   try {
     const salt = await bcrypt.genSalt(10);
@@ -87,9 +86,11 @@ userSchema.pre('save', async function (next) {
   }
 });
 
-// Şifre karşılaştırma metodu
-userSchema.methods.comparePassword = async function (candidatePassword: string): Promise<boolean> {
+// Compare password method
+UserSchema.methods.comparePassword = async function (
+  candidatePassword: string
+): Promise<boolean> {
   return bcrypt.compare(candidatePassword, this.password);
 };
 
-export default mongoose.model<IUser>('User', userSchema); 
+export default mongoose.model<IUser>('User', UserSchema); 

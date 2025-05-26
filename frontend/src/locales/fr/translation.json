@@ -4,20 +4,137 @@
     "about": "À propos",
     "features": "Fonctionnalités",
     "contact": "Contact",
-    "language": "Langue"
+    "language": "Langue",
+    "pricing": "Tarifs",
+    "faq": "FAQ",
+    "login": "Connexion",
+    "register": "S'inscrire",
+    "signup": "Commencer Gratuitement"
   },
   "landing": {
-    "hero_title": "Prise de rendez-vous alimentée par l'IA",
-    "hero_subtitle": "Laissez vos clients prendre rendez-vous via WhatsApp, 24h/24 et 7j/7.",
+    "hero_title": "Simplifiez la Gestion des Rendez-vous",
+    "hero_subtitle": "Système moderne et convivial de gestion des rendez-vous pour votre entreprise",
     "get_started": "Commencer",
     "demo": "Voir la démo",
     "features_title": "Fonctionnalités",
-    "feature1": "Intégration WhatsApp",
-    "feature2": "Chatbot IA",
-    "feature3": "Gestion facile",
-    "about_title": "À propos de nous",
-    "about_text": "Nous aidons les entreprises à automatiser la prise de rendez-vous grâce à l'IA.",
+    "feature1": "Support IA",
+    "feature1_desc": "Suggestions intelligentes de rendez-vous et analyse du comportement des clients",
+    "feature2": "Intégration WhatsApp",
+    "feature2_desc": "Communiquez avec vos clients via WhatsApp",
+    "feature3": "Rapports Détaillés",
+    "feature3_desc": "Analysez les performances de votre entreprise",
+    "feature4": "Adapté Mobile",
+    "feature4_desc": "Accès facile depuis n'importe quel appareil",
+    "feature5": "Rappels Automatiques",
+    "feature5_desc": "Évitez les absences grâce aux rappels de rendez-vous",
+    "feature6": "Réservation en Ligne",
+    "feature6_desc": "Permettez à vos clients de prendre rendez-vous 24/7",
+    "about_title": "À propos",
+    "about_text": "Nous aidons les entreprises à automatiser leurs rendez-vous avec l'IA.",
     "contact_title": "Contact",
-    "contact_text": "Des questions ? Contactez-nous !"
+    "contact_text": "Des questions ? Contactez-nous !",
+    "testimonials_title": "Ce que disent nos clients",
+    "testimonials_subtitle": "Découvrez les expériences de nos clients"
+  },
+  "testimonial1": {
+    "name": "Jean Dupont",
+    "role": "Propriétaire de salon de coiffure",
+    "content": "Grâce à ce système, nous pouvons gérer nos rendez-vous beaucoup plus efficacement. Nos clients sont très satisfaits car ils peuvent prendre rendez-vous via WhatsApp."
+  },
+  "testimonial2": {
+    "name": "Marie Laurent",
+    "role": "Gérante de centre de spa",
+    "content": "Le système de réservation assisté par l'IA apprend les préférences des clients et nous fait gagner du temps. Je le recommande vivement."
+  },
+  "testimonial3": {
+    "name": "Pierre Martin",
+    "role": "Propriétaire de restaurant",
+    "content": "Notre travail est devenu beaucoup plus facile grâce à l'application mobile et l'intégration du calendrier. Nos clients sont très satisfaits car ils peuvent réserver en ligne."
+  },
+  "pricing": {
+    "free": {
+      "title": "Gratuit",
+      "price": "0",
+      "feature1": "Gestion basique des rendez-vous",
+      "feature2": "1 compte employé",
+      "feature3": "Rapports basiques",
+      "feature4": "Support par email",
+      "feature5": "Interface mobile"
+    },
+    "pro": {
+      "title": "Professionnel",
+      "price": "199",
+      "feature1": "Toutes les fonctionnalités gratuites",
+      "feature2": "5 comptes employés",
+      "feature3": "Rapports avancés",
+      "feature4": "Intégration WhatsApp",
+      "feature5": "Support 24/7",
+      "feature6": "Domaine personnalisé"
+    },
+    "enterprise": {
+      "title": "Entreprise",
+      "price": "499",
+      "feature1": "Toutes les fonctionnalités Pro",
+      "feature2": "Employés illimités",
+      "feature3": "Accès API",
+      "feature4": "Intégrations personnalisées",
+      "feature5": "Support prioritaire",
+      "feature6": "Formation personnalisée"
+    }
+  },
+  "faq": {
+    "question1": "Comment fonctionne le système ?",
+    "answer1": "Notre système est une plateforme de gestion de rendez-vous assistée par l'IA. Vos clients peuvent prendre rendez-vous via WhatsApp ou Telegram, le site web ou l'application mobile. Le système vérifie automatiquement la disponibilité et gère les rendez-vous.",
+    "question2": "Combien de temps dure la période d'essai gratuite ?",
+    "answer2": "Vous pouvez tester toutes les fonctionnalités gratuitement pendant 14 jours. Après cette période, vous pouvez choisir le forfait qui vous convient le mieux.",
+    "question3": "Puis-je obtenir un support technique ?",
+    "answer3": "Oui, nous proposons un support par email pour tous nos forfaits. Le support téléphonique 24/7 est également disponible dans nos forfaits Professionnel et Entreprise.",
+    "question4": "Puis-je intégrer avec mon système existant ?",
+    "answer4": "Oui, notre système peut être intégré avec votre logiciel existant via le support API. Nous proposons également un support d'intégration personnalisé dans notre forfait Entreprise."
+  },
+  "contact": {
+    "reach_us": "Contactez-nous",
+    "reach_us_desc": "Contactez-nous pour vos questions",
+    "email": "Email : info@reservationsaas.com",
+    "phone": "Tél : +90 212 123 45 67",
+    "request_demo": "Demander une démo",
+    "request_demo_desc": "Postulez maintenant pour une démo personnalisée",
+    "request_demo_button": "Demander une démo"
+  },
+  "footer": {
+    "title": "ReservationSaaS",
+    "description": "Digitalisez votre entreprise, automatisez vos rendez-vous.",
+    "quick_links": "Liens rapides",
+    "features": "Fonctionnalités",
+    "pricing": "Tarifs",
+    "faq": "FAQ",
+    "legal": "Mentions légales",
+    "privacy": "Confidentialité",
+    "terms": "Conditions d'utilisation",
+    "copyright": "© {{year}} ReservationSaaS. Tous droits réservés."
+  },
+  "auth": {
+    "login": {
+      "title": "Connexion",
+      "email": "Email",
+      "password": "Mot de passe",
+      "remember_me": "Se souvenir de moi",
+      "forgot_password": "Mot de passe oublié",
+      "submit": "Se connecter",
+      "no_account": "Pas encore de compte ?",
+      "signup": "S'inscrire"
+    },
+    "register": {
+      "title": "Inscription",
+      "name": "Nom complet",
+      "email": "Email",
+      "password": "Mot de passe",
+      "confirm_password": "Confirmer le mot de passe",
+      "company": "Nom de l'entreprise",
+      "phone": "Téléphone",
+      "submit": "S'inscrire",
+      "has_account": "Vous avez déjà un compte ?",
+      "login": "Se connecter"
+    }
   }
 } 

@@ -4,20 +4,137 @@
     "about": "Über uns",
     "features": "Funktionen",
     "contact": "Kontakt",
-    "language": "Sprache"
+    "language": "Sprache",
+    "pricing": "Preise",
+    "faq": "FAQ",
+    "login": "Anmelden",
+    "register": "Registrieren",
+    "signup": "Kostenlos Starten"
   },
   "landing": {
-    "hero_title": "KI-gestützte Terminbuchung",
-    "hero_subtitle": "Lassen Sie Ihre Kunden Termine über WhatsApp rund um die Uhr buchen.",
-    "get_started": "Loslegen",
+    "hero_title": "Vereinfachen Sie die Terminverwaltung",
+    "hero_subtitle": "Modernes und benutzerfreundliches Terminverwaltungssystem für Ihr Unternehmen",
+    "get_started": "Jetzt Starten",
     "demo": "Demo ansehen",
     "features_title": "Funktionen",
-    "feature1": "WhatsApp-Integration",
-    "feature2": "KI-Chatbot",
-    "feature3": "Einfache Verwaltung",
+    "feature1": "KI-Unterstützung",
+    "feature1_desc": "Intelligente Terminvorschläge und Kundenverhaltensanalyse",
+    "feature2": "WhatsApp-Integration",
+    "feature2_desc": "Kommunizieren Sie mit Ihren Kunden über WhatsApp",
+    "feature3": "Detaillierte Berichte",
+    "feature3_desc": "Analysieren Sie die Leistung Ihres Unternehmens",
+    "feature4": "Mobil optimiert",
+    "feature4_desc": "Einfacher Zugriff von jedem Gerät",
+    "feature5": "Automatische Erinnerungen",
+    "feature5_desc": "Verhindern Sie Kundenverlust durch Terminerinnerungen",
+    "feature6": "Online-Buchung",
+    "feature6_desc": "Lassen Sie Ihre Kunden rund um die Uhr Termine buchen",
     "about_title": "Über uns",
     "about_text": "Wir helfen Unternehmen, Terminbuchungen mit KI zu automatisieren.",
     "contact_title": "Kontakt",
-    "contact_text": "Fragen? Kontaktieren Sie uns!"
+    "contact_text": "Fragen? Kontaktieren Sie uns!",
+    "testimonials_title": "Was unsere Kunden sagen",
+    "testimonials_subtitle": "Entdecken Sie die Erfahrungen unserer Kunden"
+  },
+  "testimonial1": {
+    "name": "Hans Schmidt",
+    "role": "Friseursalon-Besitzer",
+    "content": "Dank dieses Systems können wir unsere Termine viel effizienter verwalten. Unsere Kunden sind sehr zufrieden, weil sie Termine über WhatsApp vereinbaren können."
+  },
+  "testimonial2": {
+    "name": "Maria Weber",
+    "role": "Spa-Zentrum Managerin",
+    "content": "Das KI-gestützte Reservierungssystem lernt Kundenpräferenzen und spart uns Zeit. Ich empfehle es definitiv."
+  },
+  "testimonial3": {
+    "name": "Thomas Müller",
+    "role": "Restaurantbesitzer",
+    "content": "Unsere Arbeit ist durch die mobile App und Kalender-Integration viel einfacher geworden. Unsere Kunden sind sehr zufrieden, weil sie online reservieren können."
+  },
+  "pricing": {
+    "free": {
+      "title": "Kostenlos",
+      "price": "0",
+      "feature1": "Grundlegende Terminverwaltung",
+      "feature2": "1 Mitarbeiterkonto",
+      "feature3": "Grundlegende Berichte",
+      "feature4": "E-Mail-Support",
+      "feature5": "Mobil optimierte Oberfläche"
+    },
+    "pro": {
+      "title": "Professional",
+      "price": "199",
+      "feature1": "Alle kostenlosen Funktionen",
+      "feature2": "5 Mitarbeiterkonten",
+      "feature3": "Erweiterte Berichte",
+      "feature4": "WhatsApp-Integration",
+      "feature5": "24/7 Support",
+      "feature6": "Eigene Domain"
+    },
+    "enterprise": {
+      "title": "Enterprise",
+      "price": "499",
+      "feature1": "Alle Professional-Funktionen",
+      "feature2": "Unbegrenzte Mitarbeiter",
+      "feature3": "API-Zugang",
+      "feature4": "Individuelle Integrationen",
+      "feature5": "Prioritäts-Support",
+      "feature6": "Individuelles Training"
+    }
+  },
+  "faq": {
+    "question1": "Wie funktioniert das System?",
+    "answer1": "Unser System ist eine KI-gestützte Terminverwaltungsplattform. Ihre Kunden können Termine über WhatsApp oder Telegram, die Website oder die mobile App vereinbaren. Das System prüft automatisch die Verfügbarkeit und verwaltet Termine.",
+    "question2": "Wie lange dauert die kostenlose Testversion?",
+    "answer2": "Sie können alle Funktionen 14 Tage lang kostenlos testen. Nach dieser Zeit können Sie den Plan wählen, der am besten zu Ihnen passt.",
+    "question3": "Kann ich technischen Support erhalten?",
+    "answer3": "Ja, wir bieten E-Mail-Support für alle unsere Pläne. 24/7 Telefon-Support ist auch in unseren Professional- und Enterprise-Plänen verfügbar.",
+    "question4": "Kann ich mit meinem bestehenden System integrieren?",
+    "answer4": "Ja, unser System kann mit Ihrer bestehenden Software über API-Unterstützung integriert werden. Wir bieten auch benutzerdefinierte Integrationsunterstützung in unserem Enterprise-Plan."
+  },
+  "contact": {
+    "reach_us": "Kontaktieren Sie uns",
+    "reach_us_desc": "Kontaktieren Sie uns für Ihre Fragen",
+    "email": "E-Mail: info@reservationsaas.com",
+    "phone": "Tel: +90 212 123 45 67",
+    "request_demo": "Demo anfordern",
+    "request_demo_desc": "Jetzt für eine individuelle Demo bewerben",
+    "request_demo_button": "Demo anfordern"
+  },
+  "footer": {
+    "title": "ReservationSaaS",
+    "description": "Digitalisieren Sie Ihr Unternehmen, automatisieren Sie Ihre Termine.",
+    "quick_links": "Schnelllinks",
+    "features": "Funktionen",
+    "pricing": "Preise",
+    "faq": "FAQ",
+    "legal": "Rechtliches",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen",
+    "copyright": "© {{year}} ReservationSaaS. Alle Rechte vorbehalten."
+  },
+  "auth": {
+    "login": {
+      "title": "Anmelden",
+      "email": "E-Mail",
+      "password": "Passwort",
+      "remember_me": "Angemeldet bleiben",
+      "forgot_password": "Passwort vergessen",
+      "submit": "Anmelden",
+      "no_account": "Noch kein Konto?",
+      "signup": "Registrieren"
+    },
+    "register": {
+      "title": "Registrieren",
+      "name": "Vollständiger Name",
+      "email": "E-Mail",
+      "password": "Passwort",
+      "confirm_password": "Passwort bestätigen",
+      "company": "Firmenname",
+      "phone": "Telefon",
+      "submit": "Registrieren",
+      "has_account": "Bereits ein Konto?",
+      "login": "Anmelden"
+    }
   }
 } 

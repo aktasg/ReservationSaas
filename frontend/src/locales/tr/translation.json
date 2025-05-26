@@ -4,20 +4,137 @@
     "about": "Hakkında",
     "features": "Özellikler",
     "contact": "İletişim",
-    "language": "Dil"
+    "language": "Dil",
+    "pricing": "Fiyatlandırma",
+    "faq": "SSS",
+    "login": "Giriş Yap",
+    "register": "Kayıt Ol",
+    "signup": "Ücretsiz Başla"
   },
   "landing": {
-    "hero_title": "Yapay Zeka Destekli Randevu Sistemi",
-    "hero_subtitle": "Müşterileriniz WhatsApp üzerinden 7/24 randevu alabilsin.",
-    "get_started": "Başla",
+    "hero_title": "Randevu Yönetimini Kolaylaştırın",
+    "hero_subtitle": "İşletmeniz için modern ve kullanıcı dostu randevu yönetim sistemi",
+    "get_started": "Hemen Başlayın",
     "demo": "Demoyu Gör",
     "features_title": "Özellikler",
-    "feature1": "WhatsApp Entegrasyonu",
-    "feature2": "Yapay Zeka Chatbot",
-    "feature3": "Kolay Yönetim",
+    "feature1": "Yapay Zeka Desteği",
+    "feature1_desc": "Akıllı randevu önerileri ve müşteri davranış analizi",
+    "feature2": "WhatsApp Entegrasyonu",
+    "feature2_desc": "Müşterilerinizle WhatsApp üzerinden iletişim kurun",
+    "feature3": "Detaylı Raporlar",
+    "feature3_desc": "İşletmenizin performansını analiz edin",
+    "feature4": "Mobil Uyumlu",
+    "feature4_desc": "Her cihazdan kolayca erişim sağlayın",
+    "feature5": "Otomatik Hatırlatmalar",
+    "feature5_desc": "Randevu hatırlatmaları ile müşteri kaybını önleyin",
+    "feature6": "Online Randevu",
+    "feature6_desc": "Müşterileriniz 7/24 online randevu alabilsin",
     "about_title": "Hakkımızda",
     "about_text": "İşletmelerin randevu süreçlerini yapay zeka ile otomatikleştiriyoruz.",
     "contact_title": "İletişim",
-    "contact_text": "Sorularınız mı var? Bize ulaşın!"
+    "contact_text": "Sorularınız mı var? Bize ulaşın!",
+    "testimonials_title": "Müşterilerimiz Ne Diyor",
+    "testimonials_subtitle": "Müşterilerimizin deneyimlerini keşfedin"
+  },
+  "testimonial1": {
+    "name": "Ahmet Yılmaz",
+    "role": "Kuaför Salonu Sahibi",
+    "content": "Bu sistem sayesinde randevularımızı çok daha verimli yönetebiliyoruz. Müşterilerimiz de WhatsApp üzerinden randevu alabildikleri için çok memnun."
+  },
+  "testimonial2": {
+    "name": "Ayşe Kaya",
+    "role": "Spa Merkezi Yöneticisi",
+    "content": "AI destekli rezervasyon sistemi, müşteri tercihlerini öğreniyor ve bize zaman kazandırıyor. Kesinlikle tavsiye ediyorum."
+  },
+  "testimonial3": {
+    "name": "Mehmet Demir",
+    "role": "Restoran İşletmecisi",
+    "content": "Mobil uygulama ve takvim entegrasyonu sayesinde işimiz çok kolaylaştı. Müşterilerimiz de online rezervasyon yapabildikleri için çok memnun."
+  },
+  "pricing": {
+    "free": {
+      "title": "Ücretsiz",
+      "price": "0",
+      "feature1": "Temel randevu yönetimi",
+      "feature2": "1 çalışan hesabı",
+      "feature3": "Temel raporlar",
+      "feature4": "Email desteği",
+      "feature5": "Mobil uyumlu arayüz"
+    },
+    "pro": {
+      "title": "Profesyonel",
+      "price": "199",
+      "feature1": "Tüm Ücretsiz özellikler",
+      "feature2": "5 çalışan hesabı",
+      "feature3": "Gelişmiş raporlar",
+      "feature4": "WhatsApp entegrasyonu",
+      "feature5": "7/24 destek",
+      "feature6": "Özel domain"
+    },
+    "enterprise": {
+      "title": "Kurumsal",
+      "price": "499",
+      "feature1": "Tüm Profesyonel özellikler",
+      "feature2": "Sınırsız çalışan",
+      "feature3": "API erişimi",
+      "feature4": "Özel entegrasyonlar",
+      "feature5": "Öncelikli destek",
+      "feature6": "Özel eğitim"
+    }
+  },
+  "faq": {
+    "question1": "Sistem nasıl çalışıyor?",
+    "answer1": "Sistemimiz, yapay zeka destekli bir rezervasyon yönetim platformudur. Müşterileriniz WhatsApp veya Telegram üzerinden, web sitesi veya mobil uygulama üzerinden rezervasyon yapabilir. Sistem otomatik olarak müsaitlik durumunu kontrol eder ve randevuları yönetir.",
+    "question2": "Ücretsiz deneme süresi ne kadar?",
+    "answer2": "14 gün boyunca tüm özellikleri ücretsiz olarak deneyebilirsiniz. Bu süre sonunda size en uygun planı seçebilirsiniz.",
+    "question3": "Teknik destek alabilir miyim?",
+    "answer3": "Evet, tüm planlarımızda e-posta desteği sunuyoruz. Profesyonel ve Kurumsal planlarımızda 7/24 telefon desteği de mevcuttur.",
+    "question4": "Mevcut sistemimle entegre edebilir miyim?",
+    "answer4": "Evet, sistemimiz API desteği ile mevcut yazılımlarınızla entegre edilebilir. Kurumsal planımızda özel entegrasyon desteği de sunuyoruz."
+  },
+  "contact": {
+    "reach_us": "Bize Ulaşın",
+    "reach_us_desc": "Sorularınız için bizimle iletişime geçin",
+    "email": "Email: info@reservationsaas.com",
+    "phone": "Tel: +90 212 123 45 67",
+    "request_demo": "Demo Talep Et",
+    "request_demo_desc": "Size özel demo için hemen başvurun",
+    "request_demo_button": "Demo Talep Et"
+  },
+  "footer": {
+    "title": "ReservationSaaS",
+    "description": "İşletmenizi dijitalleştirin, randevularınızı otomatikleştirin.",
+    "quick_links": "Hızlı Bağlantılar",
+    "features": "Özellikler",
+    "pricing": "Fiyatlandırma",
+    "faq": "SSS",
+    "legal": "Yasal",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Şartları",
+    "copyright": "© {{year}} ReservationSaaS. Tüm hakları saklıdır."
+  },
+  "auth": {
+    "login": {
+      "title": "Giriş Yap",
+      "email": "E-posta",
+      "password": "Şifre",
+      "remember_me": "Beni Hatırla",
+      "forgot_password": "Şifremi Unuttum",
+      "submit": "Giriş Yap",
+      "no_account": "Hesabınız yok mu?",
+      "signup": "Kayıt Ol"
+    },
+    "register": {
+      "title": "Kayıt Ol",
+      "name": "Ad Soyad",
+      "email": "E-posta",
+      "password": "Şifre",
+      "confirm_password": "Şifre Tekrar",
+      "company": "Şirket Adı",
+      "phone": "Telefon",
+      "submit": "Kayıt Ol",
+      "has_account": "Zaten hesabınız var mı?",
+      "login": "Giriş Yap"
+    }
   }
 } 

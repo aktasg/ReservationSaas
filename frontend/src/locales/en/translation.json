@@ -4,20 +4,137 @@
     "about": "About",
     "features": "Features",
     "contact": "Contact",
-    "language": "Language"
+    "language": "Language",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "login": "Login",
+    "register": "Register",
+    "signup": "Start Free"
   },
   "landing": {
-    "hero_title": "AI-powered Appointment Booking",
-    "hero_subtitle": "Let your customers book appointments via WhatsApp, 24/7.",
+    "hero_title": "Simplify Appointment Management",
+    "hero_subtitle": "Modern and user-friendly appointment management system for your business",
     "get_started": "Get Started",
     "demo": "See Demo",
     "features_title": "Features",
-    "feature1": "WhatsApp Integration",
-    "feature2": "AI Chatbot",
-    "feature3": "Easy Management",
+    "feature1": "AI Support",
+    "feature1_desc": "Smart appointment suggestions and customer behavior analysis",
+    "feature2": "WhatsApp Integration",
+    "feature2_desc": "Communicate with your customers via WhatsApp",
+    "feature3": "Detailed Reports",
+    "feature3_desc": "Analyze your business performance",
+    "feature4": "Mobile Friendly",
+    "feature4_desc": "Easy access from any device",
+    "feature5": "Automatic Reminders",
+    "feature5_desc": "Prevent customer loss with appointment reminders",
+    "feature6": "Online Booking",
+    "feature6_desc": "Let your customers book appointments 24/7",
     "about_title": "About Us",
     "about_text": "We help businesses automate appointment bookings with AI.",
     "contact_title": "Contact",
-    "contact_text": "Have questions? Reach out to us!"
+    "contact_text": "Have questions? Reach out to us!",
+    "testimonials_title": "What Our Customers Say",
+    "testimonials_subtitle": "Discover our customers' experiences"
+  },
+  "testimonial1": {
+    "name": "John Smith",
+    "role": "Hair Salon Owner",
+    "content": "Thanks to this system, we can manage our appointments much more efficiently. Our customers are very happy because they can make appointments via WhatsApp."
+  },
+  "testimonial2": {
+    "name": "Sarah Johnson",
+    "role": "Spa Center Manager",
+    "content": "The AI-powered reservation system learns customer preferences and saves us time. I definitely recommend it."
+  },
+  "testimonial3": {
+    "name": "Michael Brown",
+    "role": "Restaurant Owner",
+    "content": "Our work has become much easier thanks to the mobile app and calendar integration. Our customers are very satisfied because they can make online reservations."
+  },
+  "pricing": {
+    "free": {
+      "title": "Free",
+      "price": "0",
+      "feature1": "Basic appointment management",
+      "feature2": "1 staff account",
+      "feature3": "Basic reports",
+      "feature4": "Email support",
+      "feature5": "Mobile-friendly interface"
+    },
+    "pro": {
+      "title": "Professional",
+      "price": "199",
+      "feature1": "All Free features",
+      "feature2": "5 staff accounts",
+      "feature3": "Advanced reports",
+      "feature4": "WhatsApp integration",
+      "feature5": "24/7 support",
+      "feature6": "Custom domain"
+    },
+    "enterprise": {
+      "title": "Enterprise",
+      "price": "499",
+      "feature1": "All Professional features",
+      "feature2": "Unlimited staff",
+      "feature3": "API access",
+      "feature4": "Custom integrations",
+      "feature5": "Priority support",
+      "feature6": "Custom training"
+    }
+  },
+  "faq": {
+    "question1": "How does the system work?",
+    "answer1": "Our system is an AI-powered appointment management platform. Your customers can make appointments via WhatsApp or Telegram, website or mobile app. The system automatically checks availability and manages appointments.",
+    "question2": "How long is the free trial?",
+    "answer2": "You can try all features free for 14 days. After this period, you can choose the plan that best suits you.",
+    "question3": "Can I get technical support?",
+    "answer3": "Yes, we offer email support for all our plans. 24/7 phone support is also available in our Professional and Enterprise plans.",
+    "question4": "Can I integrate with my existing system?",
+    "answer4": "Yes, our system can be integrated with your existing software with API support. We also offer custom integration support in our Enterprise plan."
+  },
+  "contact": {
+    "reach_us": "Reach Us",
+    "reach_us_desc": "Contact us for your questions",
+    "email": "Email: info@reservationsaas.com",
+    "phone": "Phone: +90 212 123 45 67",
+    "request_demo": "Request Demo",
+    "request_demo_desc": "Apply now for a custom demo",
+    "request_demo_button": "Request Demo"
+  },
+  "footer": {
+    "title": "ReservationSaaS",
+    "description": "Digitize your business, automate your appointments.",
+    "quick_links": "Quick Links",
+    "features": "Features",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "copyright": "© {{year}} ReservationSaaS. All rights reserved."
+  },
+  "auth": {
+    "login": {
+      "title": "Login",
+      "email": "Email",
+      "password": "Password",
+      "remember_me": "Remember Me",
+      "forgot_password": "Forgot Password",
+      "submit": "Login",
+      "no_account": "Don't have an account?",
+      "signup": "Sign Up"
+    },
+    "register": {
+      "title": "Sign Up",
+      "name": "Full Name",
+      "email": "Email",
+      "password": "Password",
+      "confirm_password": "Confirm Password",
+      "company": "Company Name",
+      "phone": "Phone",
+      "submit": "Sign Up",
+      "has_account": "Already have an account?",
+      "login": "Login"
+    }
   }
 } 

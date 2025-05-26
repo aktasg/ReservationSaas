@@ -1,123 +1,107 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Box,
+  Container,
   Paper,
   Typography,
   TextField,
   Button,
+  Checkbox,
+  FormControlLabel,
   Link,
-  Alert,
+  Grid,
 } from '@mui/material';
-import { Link as RouterLink, useNavigate } from 'react-router-dom';
-import { useAuth } from '../contexts/AuthContext';
+import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 const Login: React.FC = () => {
-  const { login } = useAuth();
+  const { t } = useTranslation();
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-  });
-  const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError('');
-
-    if (!formData.email || !formData.password) {
-      setError('Lütfen tüm alanları doldurun');
-      return;
-    }
-
-    setLoading(true);
-
-    try {
-      await login(formData.email, formData.password);
-      navigate('/'); // Başarılı giriş sonrası ana sayfaya yönlendir
-    } catch (err: any) {
-      const errorMessage = err.message || 'Giriş yapılırken bir hata oluştu';
-      setError(errorMessage);
-    } finally {
-      setLoading(false);
-    }
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    // Login işlemleri burada yapılacak
   };
 
   return (
-    <Box
-      sx={{
-        height: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        bgcolor: 'background.default',
-      }}
-    >
-      <Paper
-        elevation={3}
-        sx={{
-          p: 4,
-          width: '100%',
-          maxWidth: 400,
-        }}
-      >
-        <Typography variant="h5" component="h1" gutterBottom align="center">
-          Giriş Yap
-        </Typography>
-
-        {error && (
-          <Alert severity="error" sx={{ mb: 2 }}>
-            {error}
-          </Alert>
-        )}
-
-        <Box component="form" onSubmit={handleSubmit}>
-          <TextField
-            margin="normal"
-            required
-            fullWidth
-            label="E-posta"
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            disabled={loading}
-          />
-          <TextField
-            margin="normal"
-            required
-            fullWidth
-            label="Şifre"
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            disabled={loading}
-          />
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            sx={{ mt: 3, mb: 2 }}
-            disabled={loading}
+    <Box>
+      <Navbar />
+      <Container component="main" maxWidth="xs">
+        <Box
+          sx={{
+            marginTop: 8,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
+          <Paper
+            elevation={3}
+            sx={{
+              padding: 4,
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              width: '100%',
+            }}
           >
-            {loading ? 'Giriş yapılıyor...' : 'Giriş Yap'}
-          </Button>
-          <Box sx={{ textAlign: 'center' }}>
-            <Link component={RouterLink} to="/register" variant="body2">
-              Hesabınız yok mu? Kayıt olun
-            </Link>
-          </Box>
+            <Typography component="h1" variant="h5">
+              {t('auth.login.title')}
+            </Typography>
+            <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1 }}>
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                id="email"
+                label={t('auth.login.email')}
+                name="email"
+                autoComplete="email"
+                autoFocus
+              />
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                name="password"
+                label={t('auth.login.password')}
+                type="password"
+                id="password"
+                autoComplete="current-password"
+              />
+              <FormControlLabel
+                control={<Checkbox value="remember" color="primary" />}
+                label={t('auth.login.remember_me')}
+              />
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2 }}
+              >
+                {t('auth.login.submit')}
+              </Button>
+              <Grid container>
+                <Grid item xs>
+                  <Link href="#" variant="body2">
+                    {t('auth.login.forgot_password')}
+                  </Link>
+                </Grid>
+                <Grid item>
+                  <Link
+                    href="#"
+                    variant="body2"
+                    onClick={() => navigate('/register')}
+                  >
+                    {t('auth.login.signup')}
+                  </Link>
+                </Grid>
+              </Grid>
+            </Box>
+          </Paper>
         </Box>
-      </Paper>
+      </Container>
     </Box>
   );
 };

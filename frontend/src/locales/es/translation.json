@@ -4,20 +4,137 @@
     "about": "Acerca de",
     "features": "Características",
     "contact": "Contacto",
-    "language": "Idioma"
+    "language": "Idioma",
+    "pricing": "Precios",
+    "faq": "Preguntas Frecuentes",
+    "login": "Iniciar Sesión",
+    "register": "Registrarse",
+    "signup": "Comenzar Gratis"
   },
   "landing": {
-    "hero_title": "Reservas de citas impulsadas por IA",
-    "hero_subtitle": "Permita que sus clientes reserven citas por WhatsApp, 24/7.",
+    "hero_title": "Simplifica la Gestión de Citas",
+    "hero_subtitle": "Sistema moderno y fácil de usar para la gestión de citas de tu negocio",
     "get_started": "Comenzar",
     "demo": "Ver demo",
     "features_title": "Características",
-    "feature1": "Integración con WhatsApp",
-    "feature2": "Chatbot de IA",
-    "feature3": "Gestión fácil",
-    "about_title": "Sobre nosotros",
-    "about_text": "Ayudamos a las empresas a automatizar las reservas de citas con IA.",
+    "feature1": "Soporte de IA",
+    "feature1_desc": "Sugerencias inteligentes de citas y análisis del comportamiento de clientes",
+    "feature2": "Integración con WhatsApp",
+    "feature2_desc": "Comunícate con tus clientes a través de WhatsApp",
+    "feature3": "Informes Detallados",
+    "feature3_desc": "Analiza el rendimiento de tu negocio",
+    "feature4": "Compatible con Móviles",
+    "feature4_desc": "Acceso fácil desde cualquier dispositivo",
+    "feature5": "Recordatorios Automáticos",
+    "feature5_desc": "Evita ausencias con recordatorios de citas",
+    "feature6": "Reserva en Línea",
+    "feature6_desc": "Permite a tus clientes reservar citas 24/7",
+    "about_title": "Acerca de",
+    "about_text": "Ayudamos a las empresas a automatizar sus citas con IA.",
     "contact_title": "Contacto",
-    "contact_text": "¿Tienes preguntas? ¡Contáctanos!"
+    "contact_text": "¿Preguntas? ¡Contáctanos!",
+    "testimonials_title": "Lo que dicen nuestros clientes",
+    "testimonials_subtitle": "Descubre las experiencias de nuestros clientes"
+  },
+  "testimonial1": {
+    "name": "Juan García",
+    "role": "Propietario de peluquería",
+    "content": "Gracias a este sistema, podemos gestionar nuestras citas de manera mucho más eficiente. Nuestros clientes están muy satisfechos porque pueden reservar citas a través de WhatsApp."
+  },
+  "testimonial2": {
+    "name": "María Rodríguez",
+    "role": "Gerente de centro de spa",
+    "content": "El sistema de reservas con IA aprende las preferencias de los clientes y nos ahorra tiempo. Lo recomiendo definitivamente."
+  },
+  "testimonial3": {
+    "name": "Carlos Martínez",
+    "role": "Propietario de restaurante",
+    "content": "Nuestro trabajo se ha vuelto mucho más fácil gracias a la aplicación móvil y la integración del calendario. Nuestros clientes están muy satisfechos porque pueden reservar en línea."
+  },
+  "pricing": {
+    "free": {
+      "title": "Gratis",
+      "price": "0",
+      "feature1": "Gestión básica de citas",
+      "feature2": "1 cuenta de empleado",
+      "feature3": "Informes básicos",
+      "feature4": "Soporte por email",
+      "feature5": "Interfaz móvil"
+    },
+    "pro": {
+      "title": "Profesional",
+      "price": "199",
+      "feature1": "Todas las funciones gratuitas",
+      "feature2": "5 cuentas de empleados",
+      "feature3": "Informes avanzados",
+      "feature4": "Integración con WhatsApp",
+      "feature5": "Soporte 24/7",
+      "feature6": "Dominio personalizado"
+    },
+    "enterprise": {
+      "title": "Empresa",
+      "price": "499",
+      "feature1": "Todas las funciones Pro",
+      "feature2": "Empleados ilimitados",
+      "feature3": "Acceso API",
+      "feature4": "Integraciones personalizadas",
+      "feature5": "Soporte prioritario",
+      "feature6": "Formación personalizada"
+    }
+  },
+  "faq": {
+    "question1": "¿Cómo funciona el sistema?",
+    "answer1": "Nuestro sistema es una plataforma de gestión de citas con IA. Tus clientes pueden reservar citas a través de WhatsApp o Telegram, el sitio web o la aplicación móvil. El sistema verifica automáticamente la disponibilidad y gestiona las citas.",
+    "question2": "¿Cuánto dura el período de prueba gratuito?",
+    "answer2": "Puedes probar todas las funciones gratuitamente durante 14 días. Después de este período, puedes elegir el plan que mejor se adapte a ti.",
+    "question3": "¿Puedo obtener soporte técnico?",
+    "answer3": "Sí, ofrecemos soporte por email para todos nuestros planes. El soporte telefónico 24/7 también está disponible en nuestros planes Profesional y Empresa.",
+    "question4": "¿Puedo integrar con mi sistema existente?",
+    "answer4": "Sí, nuestro sistema puede integrarse con tu software existente a través del soporte API. También ofrecemos soporte de integración personalizado en nuestro plan Empresa."
+  },
+  "contact": {
+    "reach_us": "Contáctanos",
+    "reach_us_desc": "Contáctanos para tus preguntas",
+    "email": "Email: info@reservationsaas.com",
+    "phone": "Tel: +90 212 123 45 67",
+    "request_demo": "Solicitar demo",
+    "request_demo_desc": "Solicita ahora una demo personalizada",
+    "request_demo_button": "Solicitar demo"
+  },
+  "footer": {
+    "title": "ReservationSaaS",
+    "description": "Digitaliza tu negocio, automatiza tus citas.",
+    "quick_links": "Enlaces rápidos",
+    "features": "Características",
+    "pricing": "Precios",
+    "faq": "Preguntas Frecuentes",
+    "legal": "Legal",
+    "privacy": "Privacidad",
+    "terms": "Términos de uso",
+    "copyright": "© {{year}} ReservationSaaS. Todos los derechos reservados."
+  },
+  "auth": {
+    "login": {
+      "title": "Iniciar Sesión",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "remember_me": "Recordarme",
+      "forgot_password": "¿Olvidaste tu contraseña?",
+      "submit": "Iniciar Sesión",
+      "no_account": "¿No tienes una cuenta?",
+      "signup": "Registrarse"
+    },
+    "register": {
+      "title": "Registrarse",
+      "name": "Nombre completo",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "confirm_password": "Confirmar contraseña",
+      "company": "Nombre de la empresa",
+      "phone": "Teléfono",
+      "submit": "Registrarse",
+      "has_account": "¿Ya tienes una cuenta?",
+      "login": "Iniciar Sesión"
+    }
   }
 } 
