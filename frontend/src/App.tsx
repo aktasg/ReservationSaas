@@ -19,6 +19,7 @@ import NewBusiness from './pages/admin/NewBusiness';
 import EditBusiness from './pages/admin/EditBusiness';
 import PrivateRoute from './components/PrivateRoute';
 import AdminRoute from './components/AdminRoute';
+import LandingPage from './pages/LandingPage';
 
 // Pages will be imported here
 const Employees = React.lazy(() => import('./pages/Employees'));
@@ -28,14 +29,26 @@ const theme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#1976d2',
+      main: '#2196F3',
     },
     secondary: {
-      main: '#dc004e',
+      main: '#21CBF3',
     },
   },
   typography: {
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontFamily: '"Inter", "Helvetica", "Arial", sans-serif',
+    h1: {
+      fontWeight: 700,
+    },
+    h2: {
+      fontWeight: 700,
+    },
+    h3: {
+      fontWeight: 600,
+    },
+    h4: {
+      fontWeight: 600,
+    },
   },
 });
 
@@ -47,6 +60,7 @@ const App: React.FC = () => {
         <AuthProvider>
           <Router>
             <Routes>
+              <Route path="/" element={<LandingPage />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route
