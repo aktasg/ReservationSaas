@@ -1,0 +1,23 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "features": "Features",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "landing": {
+    "hero_title": "AI-powered Appointment Booking",
+    "hero_subtitle": "Let your customers book appointments via WhatsApp, 24/7.",
+    "get_started": "Get Started",
+    "demo": "See Demo",
+    "features_title": "Features",
+    "feature1": "WhatsApp Integration",
+    "feature2": "AI Chatbot",
+    "feature3": "Easy Management",
+    "about_title": "About Us",
+    "about_text": "We help businesses automate appointment bookings with AI.",
+    "contact_title": "Contact",
+    "contact_text": "Have questions? Reach out to us!"
+  }
+} 

@@ -1,0 +1,23 @@
+{
+  "navbar": {
+    "home": "Anasayfa",
+    "about": "Hakkında",
+    "features": "Özellikler",
+    "contact": "İletişim",
+    "language": "Dil"
+  },
+  "landing": {
+    "hero_title": "Yapay Zeka Destekli Randevu Sistemi",
+    "hero_subtitle": "Müşterileriniz WhatsApp üzerinden 7/24 randevu alabilsin.",
+    "get_started": "Başla",
+    "demo": "Demoyu Gör",
+    "features_title": "Özellikler",
+    "feature1": "WhatsApp Entegrasyonu",
+    "feature2": "Yapay Zeka Chatbot",
+    "feature3": "Kolay Yönetim",
+    "about_title": "Hakkımızda",
+    "about_text": "İşletmelerin randevu süreçlerini yapay zeka ile otomatikleştiriyoruz.",
+    "contact_title": "İletişim",
+    "contact_text": "Sorularınız mı var? Bize ulaşın!"
+  }
+} 

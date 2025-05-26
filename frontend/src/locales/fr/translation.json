@@ -1,0 +1,23 @@
+{
+  "navbar": {
+    "home": "Accueil",
+    "about": "À propos",
+    "features": "Fonctionnalités",
+    "contact": "Contact",
+    "language": "Langue"
+  },
+  "landing": {
+    "hero_title": "Prise de rendez-vous alimentée par l'IA",
+    "hero_subtitle": "Laissez vos clients prendre rendez-vous via WhatsApp, 24h/24 et 7j/7.",
+    "get_started": "Commencer",
+    "demo": "Voir la démo",
+    "features_title": "Fonctionnalités",
+    "feature1": "Intégration WhatsApp",
+    "feature2": "Chatbot IA",
+    "feature3": "Gestion facile",
+    "about_title": "À propos de nous",
+    "about_text": "Nous aidons les entreprises à automatiser la prise de rendez-vous grâce à l'IA.",
+    "contact_title": "Contact",
+    "contact_text": "Des questions ? Contactez-nous !"
+  }
+} 

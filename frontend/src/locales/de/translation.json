@@ -1,0 +1,23 @@
+{
+  "navbar": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "features": "Funktionen",
+    "contact": "Kontakt",
+    "language": "Sprache"
+  },
+  "landing": {
+    "hero_title": "KI-gestützte Terminbuchung",
+    "hero_subtitle": "Lassen Sie Ihre Kunden Termine über WhatsApp rund um die Uhr buchen.",
+    "get_started": "Loslegen",
+    "demo": "Demo ansehen",
+    "features_title": "Funktionen",
+    "feature1": "WhatsApp-Integration",
+    "feature2": "KI-Chatbot",
+    "feature3": "Einfache Verwaltung",
+    "about_title": "Über uns",
+    "about_text": "Wir helfen Unternehmen, Terminbuchungen mit KI zu automatisieren.",
+    "contact_title": "Kontakt",
+    "contact_text": "Fragen? Kontaktieren Sie uns!"
+  }
+} 

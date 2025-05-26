@@ -20,6 +20,9 @@ import EditBusiness from './pages/admin/EditBusiness';
 import PrivateRoute from './components/PrivateRoute';
 import AdminRoute from './components/AdminRoute';
 import LandingPage from './pages/LandingPage';
+import Navbar from './components/Navbar';
+import './i18n';
+import { Box } from '@mui/material';
 
 // Pages will be imported here
 const Employees = React.lazy(() => import('./pages/Employees'));
@@ -30,9 +33,19 @@ const theme = createTheme({
     mode: 'light',
     primary: {
       main: '#2196F3',
+      light: '#64B5F6',
+      dark: '#1976D2',
+      contrastText: '#fff',
     },
     secondary: {
       main: '#21CBF3',
+      light: '#80DEEA',
+      dark: '#00ACC1',
+      contrastText: '#fff',
+    },
+    background: {
+      default: '#f5f5f5',
+      paper: '#ffffff',
     },
   },
   typography: {
@@ -50,6 +63,24 @@ const theme = createTheme({
       fontWeight: 600,
     },
   },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: 'none',
+          borderRadius: 8,
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          borderRadius: 12,
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+        },
+      },
+    },
+  },
 });
 
 const App: React.FC = () => {
@@ -59,76 +90,79 @@ const App: React.FC = () => {
         <CssBaseline />
         <AuthProvider>
           <Router>
-            <Routes>
-              <Route path="/" element={<LandingPage />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
-              <Route
-                path="/"
-                element={
-                  <PrivateRoute>
-                    <Home />
-                  </PrivateRoute>
-                }
-              />
-              <Route
-                path="/employees/new"
-                element={
-                  <PrivateRoute>
-                    <NewEmployee />
-                  </PrivateRoute>
-                }
-              />
-              <Route
-                path="/employees/:id/edit"
-                element={
-                  <PrivateRoute>
-                    <EditEmployee />
-                  </PrivateRoute>
-                }
-              />
-              <Route
-                path="/settings"
-                element={
-                  <PrivateRoute>
-                    <Settings />
-                  </PrivateRoute>
-                }
-              />
-              <Route
-                path="/admin"
-                element={
-                  <AdminRoute>
-                    <Dashboard />
-                  </AdminRoute>
-                }
-              />
-              <Route
-                path="/admin/businesses"
-                element={
-                  <AdminRoute>
-                    <Businesses />
-                  </AdminRoute>
-                }
-              />
-              <Route
-                path="/admin/businesses/new"
-                element={
-                  <AdminRoute>
-                    <NewBusiness />
-                  </AdminRoute>
-                }
-              />
-              <Route
-                path="/admin/businesses/:id/edit"
-                element={
-                  <AdminRoute>
-                    <EditBusiness />
-                  </AdminRoute>
-                }
-              />
-              <Route path="*" element={<Navigate to="/" replace />} />
-            </Routes>
+            <Navbar />
+            <Box sx={{ pt: { xs: 7, sm: 8 } }}>
+              <Routes>
+                <Route path="/" element={<LandingPage />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route
+                  path="/"
+                  element={
+                    <PrivateRoute>
+                      <Home />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/employees/new"
+                  element={
+                    <PrivateRoute>
+                      <NewEmployee />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/employees/:id/edit"
+                  element={
+                    <PrivateRoute>
+                      <EditEmployee />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/settings"
+                  element={
+                    <PrivateRoute>
+                      <Settings />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/admin"
+                  element={
+                    <AdminRoute>
+                      <Dashboard />
+                    </AdminRoute>
+                  }
+                />
+                <Route
+                  path="/admin/businesses"
+                  element={
+                    <AdminRoute>
+                      <Businesses />
+                    </AdminRoute>
+                  }
+                />
+                <Route
+                  path="/admin/businesses/new"
+                  element={
+                    <AdminRoute>
+                      <NewBusiness />
+                    </AdminRoute>
+                  }
+                />
+                <Route
+                  path="/admin/businesses/:id/edit"
+                  element={
+                    <AdminRoute>
+                      <EditBusiness />
+                    </AdminRoute>
+                  }
+                />
+                <Route path="*" element={<Navigate to="/" replace />} />
+              </Routes>
+            </Box>
           </Router>
         </AuthProvider>
       </LocalizationProvider>

@@ -1,0 +1,23 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "features": "Características",
+    "contact": "Contacto",
+    "language": "Idioma"
+  },
+  "landing": {
+    "hero_title": "Reservas de citas impulsadas por IA",
+    "hero_subtitle": "Permita que sus clientes reserven citas por WhatsApp, 24/7.",
+    "get_started": "Comenzar",
+    "demo": "Ver demo",
+    "features_title": "Características",
+    "feature1": "Integración con WhatsApp",
+    "feature2": "Chatbot de IA",
+    "feature3": "Gestión fácil",
+    "about_title": "Sobre nosotros",
+    "about_text": "Ayudamos a las empresas a automatizar las reservas de citas con IA.",
+    "contact_title": "Contacto",
+    "contact_text": "¿Tienes preguntas? ¡Contáctanos!"
+  }
+} 

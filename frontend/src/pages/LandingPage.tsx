@@ -11,120 +11,119 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Navbar from '../components/Navbar';
 import HeroDemo from '../components/HeroDemo';
+import { useTranslation } from 'react-i18next';
 
 const features = [
   {
     icon: <SmartToyIcon sx={{ fontSize: 40 }} />,
-    title: 'AI Destekli Rezervasyon',
-    description: 'Yapay zeka teknolojimiz ile müşteri tercihlerini analiz edin ve rezervasyonları otomatikleştirin.'
+    key: 'feature1',
+    descriptionKey: 'feature1_desc'
   },
   {
     icon: <WhatsAppIcon sx={{ fontSize: 40 }} />,
-    title: 'WhatsApp & Telegram Entegrasyonu',
-    description: 'Müşterilerinizle doğrudan mesajlaşın ve rezervasyonları anlık olarak yönetin.'
+    key: 'feature2',
+    descriptionKey: 'feature2_desc'
   },
   {
     icon: <DashboardIcon sx={{ fontSize: 40 }} />,
-    title: 'Merkezi Dashboard',
-    description: 'Tüm işletmenizi tek bir yerden yönetin, rezervasyonları ve müşteri verilerini görüntüleyin.'
+    key: 'feature3',
+    descriptionKey: 'feature3_desc'
   },
   {
     icon: <AssessmentIcon sx={{ fontSize: 40 }} />,
-    title: 'Detaylı Raporlama',
-    description: 'İşletmenizin performansını analiz edin, özel raporlar oluşturun ve veriye dayalı kararlar alın.'
+    key: 'feature4',
+    descriptionKey: 'feature4_desc'
   },
   {
     icon: <PhoneIphoneIcon sx={{ fontSize: 40 }} />,
-    title: 'Mobil Uygulama',
-    description: 'İşletmenizi her yerden yönetin. iOS ve Android uygulamalarımız ile her an kontrol sizde.'
+    key: 'feature5',
+    descriptionKey: 'feature5_desc'
   },
   {
     icon: <CalendarMonthIcon sx={{ fontSize: 40 }} />,
-    title: 'Takvim Entegrasyonu',
-    description: 'Google Calendar, Outlook ve diğer popüler takvim uygulamaları ile senkronize çalışın.'
+    key: 'feature6',
+    descriptionKey: 'feature6_desc'
   }
 ];
 
 const pricingPlans = [
   {
-    title: 'Ücretsiz',
-    price: '0',
+    key: 'free',
     features: [
-      'Temel rezervasyon yönetimi',
-      'WhatsApp entegrasyonu',
-      'Temel raporlama',
-      '1 kullanıcı',
-      '14 gün ücretsiz deneme'
+      'pricing.free.feature1',
+      'pricing.free.feature2',
+      'pricing.free.feature3',
+      'pricing.free.feature4',
+      'pricing.free.feature5'
     ]
   },
   {
-    title: 'Profesyonel',
-    price: '199',
+    key: 'pro',
     features: [
-      'Tüm Ücretsiz özellikleri',
-      'AI destekli rezervasyon',
-      'Telegram entegrasyonu',
-      'Gelişmiş raporlama',
-      '5 kullanıcı',
-      '7/24 destek'
+      'pricing.pro.feature1',
+      'pricing.pro.feature2',
+      'pricing.pro.feature3',
+      'pricing.pro.feature4',
+      'pricing.pro.feature5',
+      'pricing.pro.feature6'
     ]
   },
   {
-    title: 'Kurumsal',
-    price: '499',
+    key: 'enterprise',
     features: [
-      'Tüm Profesyonel özellikleri',
-      'Özel AI modelleri',
-      'API erişimi',
-      'Sınırsız kullanıcı',
-      'Öncelikli destek',
-      'Özel entegrasyonlar'
+      'pricing.enterprise.feature1',
+      'pricing.enterprise.feature2',
+      'pricing.enterprise.feature3',
+      'pricing.enterprise.feature4',
+      'pricing.enterprise.feature5',
+      'pricing.enterprise.feature6'
     ]
   }
 ];
 
 const testimonials = [
   {
-    name: 'Ahmet Yılmaz',
-    role: 'Kuaför Salonu Sahibi',
+    name: 'testimonial1.name',
+    role: 'testimonial1.role',
     avatar: 'A',
-    content: 'Bu sistem sayesinde randevularımızı çok daha verimli yönetebiliyoruz. Müşterilerimiz de WhatsApp üzerinden randevu alabildikleri için çok memnun.'
+    content: 'testimonial1.content'
   },
   {
-    name: 'Ayşe Kaya',
-    role: 'Spa Merkezi Yöneticisi',
+    name: 'testimonial2.name',
+    role: 'testimonial2.role',
     avatar: 'A',
-    content: 'AI destekli rezervasyon sistemi, müşteri tercihlerini öğreniyor ve bize zaman kazandırıyor. Kesinlikle tavsiye ediyorum.'
+    content: 'testimonial2.content'
   },
   {
-    name: 'Mehmet Demir',
-    role: 'Restoran İşletmecisi',
+    name: 'testimonial3.name',
+    role: 'testimonial3.role',
     avatar: 'M',
-    content: 'Mobil uygulama ve takvim entegrasyonu sayesinde işimiz çok kolaylaştı. Müşterilerimiz de online rezervasyon yapabildikleri için çok memnun.'
+    content: 'testimonial3.content'
   }
 ];
 
 const faqs = [
   {
-    question: 'Sistem nasıl çalışıyor?',
-    answer: 'Sistemimiz, yapay zeka destekli bir rezervasyon yönetim platformudur. Müşterileriniz WhatsApp veya Telegram üzerinden, web sitesi veya mobil uygulama üzerinden rezervasyon yapabilir. Sistem otomatik olarak müsaitlik durumunu kontrol eder ve randevuları yönetir.'
+    question: 'faq.question1',
+    answer: 'faq.answer1'
   },
   {
-    question: 'Ücretsiz deneme süresi ne kadar?',
-    answer: '14 gün boyunca tüm özellikleri ücretsiz olarak deneyebilirsiniz. Bu süre sonunda size en uygun planı seçebilirsiniz.'
+    question: 'faq.question2',
+    answer: 'faq.answer2'
   },
   {
-    question: 'Teknik destek alabilir miyim?',
-    answer: 'Evet, tüm planlarımızda e-posta desteği sunuyoruz. Profesyonel ve Kurumsal planlarımızda 7/24 telefon desteği de mevcuttur.'
+    question: 'faq.question3',
+    answer: 'faq.answer3'
   },
   {
-    question: 'Mevcut sistemimle entegre edebilir miyim?',
-    answer: 'Evet, sistemimiz API desteği ile mevcut yazılımlarınızla entegre edilebilir. Kurumsal planımızda özel entegrasyon desteği de sunuyoruz.'
+    question: 'faq.question4',
+    answer: 'faq.answer4'
   }
 ];
 
 const LandingPage: React.FC = () => {
   const theme = useTheme();
+  const { t } = useTranslation();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -153,10 +152,10 @@ const LandingPage: React.FC = () => {
                 transition={{ duration: 0.5 }}
               >
                 <Typography variant="h2" component="h1" gutterBottom>
-                  İşletmenizi Geleceğe Taşıyın
+                  {t('landing.hero_title')}
                 </Typography>
                 <Typography variant="h5" gutterBottom>
-                  AI destekli rezervasyon sistemi ile işletmenizi dijitalleştirin
+                  {t('landing.hero_subtitle')}
                 </Typography>
                 <Button
                   variant="contained"
@@ -164,7 +163,7 @@ const LandingPage: React.FC = () => {
                   size="large"
                   sx={{ mt: 2 }}
                 >
-                  Hemen Başlayın
+                  {t('landing.get_started')}
                 </Button>
               </motion.div>
             </Grid>
@@ -184,7 +183,7 @@ const LandingPage: React.FC = () => {
       {/* Features Section */}
       <Container maxWidth="lg" sx={{ py: 8 }} id="features">
         <Typography variant="h3" component="h2" align="center" gutterBottom>
-          Özellikler
+          {t('landing.features_title')}
         </Typography>
         <Grid container spacing={4} sx={{ mt: 4 }}>
           {features.map((feature, index) => (
@@ -200,20 +199,20 @@ const LandingPage: React.FC = () => {
                     height: '100%',
                     display: 'flex',
                     flexDirection: 'column',
-                    alignItems: 'center',
-                    textAlign: 'center',
                     p: 2,
                   }}
                 >
-                  <Box sx={{ color: theme.palette.primary.main, mb: 2 }}>
+                  <Box sx={{ display: 'flex', justifyContent: 'center', mb: 2 }}>
                     {feature.icon}
                   </Box>
-                  <Typography variant="h5" component="h3" gutterBottom>
-                    {feature.title}
-                  </Typography>
-                  <Typography color="text.secondary">
-                    {feature.description}
-                  </Typography>
+                  <CardContent>
+                    <Typography variant="h6" component="h3" gutterBottom align="center">
+                      {t(`landing.${feature.key}`)}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary" align="center">
+                      {t(`landing.${feature.descriptionKey}`)}
+                    </Typography>
+                  </CardContent>
                 </Card>
               </motion.div>
             </Grid>
@@ -222,10 +221,23 @@ const LandingPage: React.FC = () => {
       </Container>
 
       {/* Testimonials Section */}
-      <Box sx={{ bgcolor: 'grey.100', py: 8 }}>
+      <Box sx={{ py: 8, bgcolor: 'background.paper' }}>
         <Container maxWidth="lg">
-          <Typography variant="h3" component="h2" align="center" gutterBottom>
-            Müşterilerimiz Ne Diyor?
+          <Typography
+            variant="h2"
+            align="center"
+            gutterBottom
+            sx={{ mb: 6 }}
+          >
+            {t('landing.testimonials_title')}
+          </Typography>
+          <Typography
+            variant="h5"
+            align="center"
+            color="text.secondary"
+            sx={{ mb: 8 }}
+          >
+            {t('landing.testimonials_subtitle')}
           </Typography>
           <Grid container spacing={4} sx={{ mt: 4 }}>
             {testimonials.map((testimonial, index) => (
@@ -242,13 +254,13 @@ const LandingPage: React.FC = () => {
                           {testimonial.avatar}
                         </Avatar>
                         <Box>
-                          <Typography variant="h6">{testimonial.name}</Typography>
+                          <Typography variant="h6">{t(testimonial.name)}</Typography>
                           <Typography variant="body2" color="text.secondary">
-                            {testimonial.role}
+                            {t(testimonial.role)}
                           </Typography>
                         </Box>
                       </Box>
-                      <Typography variant="body1">{testimonial.content}</Typography>
+                      <Typography variant="body1">{t(testimonial.content)}</Typography>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -262,7 +274,7 @@ const LandingPage: React.FC = () => {
       <Box sx={{ py: 8 }} id="pricing">
         <Container maxWidth="lg">
           <Typography variant="h3" component="h2" align="center" gutterBottom>
-            Fiyatlandırma
+            {t('navbar.pricing')}
           </Typography>
           <Grid container spacing={4} sx={{ mt: 4 }}>
             {pricingPlans.map((plan, index) => (
@@ -282,10 +294,10 @@ const LandingPage: React.FC = () => {
                   >
                     <CardContent>
                       <Typography variant="h4" component="h3" gutterBottom>
-                        {plan.title}
+                        {t(`pricing.${plan.key}.title`)}
                       </Typography>
                       <Typography variant="h3" component="div" gutterBottom>
-                        ₺{plan.price}
+                        ₺{t(`pricing.${plan.key}.price`)}
                         <Typography variant="subtitle1" component="span">
                           /ay
                         </Typography>
@@ -297,7 +309,7 @@ const LandingPage: React.FC = () => {
                             variant="body1"
                             sx={{ mb: 1 }}
                           >
-                            • {feature}
+                            • {t(feature)}
                           </Typography>
                         ))}
                       </Box>
@@ -322,16 +334,16 @@ const LandingPage: React.FC = () => {
       <Box sx={{ bgcolor: 'grey.100', py: 8 }} id="faq">
         <Container maxWidth="md">
           <Typography variant="h3" component="h2" align="center" gutterBottom>
-            Sık Sorulan Sorular
+            {t('navbar.faq')}
           </Typography>
           <Box sx={{ mt: 4 }}>
             {faqs.map((faq, index) => (
               <Accordion key={index}>
                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                  <Typography variant="h6">{faq.question}</Typography>
+                  <Typography variant="h6">{t(faq.question)}</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography>{faq.answer}</Typography>
+                  <Typography>{t(faq.answer)}</Typography>
                 </AccordionDetails>
               </Accordion>
             ))}
@@ -343,35 +355,35 @@ const LandingPage: React.FC = () => {
       <Box sx={{ py: 8 }} id="contact">
         <Container maxWidth="md">
           <Typography variant="h3" component="h2" align="center" gutterBottom>
-            İletişim
+            {t('navbar.contact')}
           </Typography>
           <Grid container spacing={4} sx={{ mt: 4 }}>
             <Grid item xs={12} md={6}>
               <Paper sx={{ p: 3 }}>
                 <Typography variant="h6" gutterBottom>
-                  Bize Ulaşın
+                  {t('contact.reach_us')}
                 </Typography>
                 <Typography variant="body1" paragraph>
-                  Sorularınız için bize e-posta gönderebilir veya telefon numaramızdan ulaşabilirsiniz.
+                  {t('contact.reach_us_desc')}
                 </Typography>
                 <Typography variant="body1">
-                  E-posta: info@reservationsaas.com
+                  {t('contact.email')}
                 </Typography>
                 <Typography variant="body1">
-                  Telefon: +90 (212) 123 45 67
+                  {t('contact.phone')}
                 </Typography>
               </Paper>
             </Grid>
             <Grid item xs={12} md={6}>
               <Paper sx={{ p: 3 }}>
                 <Typography variant="h6" gutterBottom>
-                  Demo İsteyin
+                  {t('contact.request_demo')}
                 </Typography>
                 <Typography variant="body1" paragraph>
-                  Sistemimizi daha detaylı incelemek için ücretsiz demo talep edin.
+                  {t('contact.request_demo_desc')}
                 </Typography>
                 <Button variant="contained" color="primary" fullWidth>
-                  Demo Talep Et
+                  {t('contact.request_demo_button')}
                 </Button>
               </Paper>
             </Grid>
